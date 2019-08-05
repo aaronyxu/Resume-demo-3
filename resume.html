@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Aaron's Resume</title>
+  <link rel="stylesheet" href="./main.css">
+  <script src="//at.alicdn.com/t/font_1280948_6wjysc3q0cq.js"></script>
+  <style type="text/css">
+    .loading {
+      width: 200px;
+      height: 200px;
+      position: relative;
+    }
+
+    .loading::before,
+    .loading::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: rgb(4, 194, 201);
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      animation: s 1.5s linear infinite;
+    }
+
+    .loading::after {
+      animation-delay: 0.75s;
+    }
+
+    @keyframes s {
+      0% {
+        width: 0px;
+        height: 0px;
+        opacity: 1;
+      }
+
+      100% {
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+      }
+    }
+
+    .icon {
+      width: 1em;
+      height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }
+
+    .site-welcome {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgb(27, 36, 47);
+      z-index: 10;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .site-welcome.active {
+      display: flex;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="siteWelcome" class="site-welcome active">
+    <div class="loading"></div>
+  </div>
+  <div id="topNavBar" class="topNavBar">
+    <div class="topNavBar-inner clearfix">
+      <a class="logo" href="#" alt="logo" style="float: left; ">
+        <span class="ax">AX</span><span class="card">card</span>
+      </a>
+      <nav class="menu" style="float: right;">
+        <ul class="clearfix">
+          <li><a href="#siteAbout">ABOUT</a></li>
+          <li><a href="#siteSkills">SKILLS</a></li>
+          <li>
+            <a href="#siteWorks">PORTFOLIO</a>
+            <ul class="subMenu">
+              <li>JAVASCRIPT</li>
+              <li>RUBY/RAILS</li>
+              <li>NODE.JS</li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">BLOG</a>
+            <ul class="subMenu">
+              <li>BLOG 1</li>
+              <li>BLOG 2</li>
+              <li>BLOG 3</li>
+            </ul>
+          </li>
+          <li><a href="#">CALENDAR</a></li>
+          <li><a href="#">CONTACT</a></li>
+          <li><a href="#">OTHER</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="banner">
+    <div class="mask"></div>
+  </div>
+  <main>
+    <div data-x id="siteAbout" class="userCard">
+      <div class="pictureAndText clearfix">
+        <div class="picture">
+          <img src="./img/avatar.PNG" width=299 height=347 alt="头像">
+        </div>
+        <div class="text">
+          <span class="welcome">Hello
+            <span class="triangle"></span>
+          </span>
+          <h1>I'm <b>Aaron Xu</b></h1>
+          <p>Front-End Developer</p>
+          <hr>
+          <dl>
+            <dt>AGE</dt>
+            <dd>26</dd>
+            <dt>CITY</dt>
+            <dd>Shanghai</dd>
+            <dt>E-MAIL</dt>
+            <dd>sgyxu10@hotmail.com</dd>
+            <dt>PHONE</dt>
+            <dd>15988616588</dd>
+          </dl>
+        </div>
+      </div>
+      <footer class="media">
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-ttww"></use>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-weibo"></use>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-tian7_facebook"></use>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-github"></use>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-jirengulogojichu1"></use>
+          </svg>
+        </a>
+      </footer>
+    </div>
+
+    <p class="downloadResume-wrapper">
+      <a class="downloadResume" href="./download-demo.pdf" target="_blank" download>
+        DOWNLOAD RESUME
+      </a>
+    </p>
+
+
+
+    <p class="selfIntroduction">
+    </p>
+
+  </main>
+  <section data-x id="siteSkills" class="skills">
+    <h2>SKILLS</h2>
+    <ol class="clearfix">
+      <li>
+        <h3>
+          HTML 5 &amp; CSS 3
+          <span class="barValue">80%</span>
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 80%"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          JavaScript
+          <span class="barValue">70%</span>
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 70%"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          jQuery
+          <span class="barValue">72%</span>
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 72%"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          Vue
+          <span class="barValue">65%</span>
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 65%"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          React
+          <span class="barValue">60%</span>
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 60%"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          HTTP
+          <span class="barValue">90%</span>
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 90%"></div>
+        </div>
+      </li>
+    </ol>
+  </section>
+  <section data-x id="siteWorks" class="portfolio">
+    <h2>PORTFOLIOS</h2>
+    <nav>
+      <ol class="clearfix">
+        <li id="portfolio1">ALL</li>
+        <li id="portfolio2">JAVASCRIPT</li>
+        <li id="portfolio3">RUBY/RAILS</li>
+        <li id="portfolio4">NODE.JS</li>
+      </ol>
+      <div id="portfolioBar" class="bar state-1">
+        <div class="bar-inner"></div>
+      </div>
+    </nav>
+
+    <script>
+      portfolio1.onclick = function () {
+        portfolioBar.className = 'bar state-1'
+      }
+      portfolio2.onclick = function () {
+        portfolioBar.className = 'bar state-2'
+      }
+      portfolio3.onclick = function () {
+        portfolioBar.className = 'bar state-3'
+      }
+      portfolio4.onclick = function () {
+        portfolioBar.className = 'bar state-4'
+      }
+    </script>
+
+
+    <div class="works" style="height: 576px;">
+      <div class="big" style="top:0; left: 0;">
+        <img id="work1" src="./img/1.jpg" alt="Work1">
+      </div>
+      <div class="small" style="top: 0; left: 644px;">
+        <img id="work2" src="./img/2.jpg" alt="Work2">
+      </div>
+      <div class="small" style="top: 298px; left: 644px;">
+        <img id="work3" src="./img/3.jpg" alt="Work3">
+      </div>
+    </div>
+
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.4.0/Tween.min.js"></script>
+  <script>
+    setTimeout(function () {
+      siteWelcome.classList.remove('active')
+    }, 500)
+
+    let specialTags = document.querySelectorAll('[data-x]')
+    for (let i = 0; i < specialTags.length; i++) {
+      specialTags[i].classList.add('offset')
+    }
+    setTimeout(function () {
+      findClosest()
+    }, 500)
+
+
+
+    window.onscroll = function (xx) {
+      if (window.scrollY > 0) {
+        topNavBar.classList.add('sticky')
+      } else {
+        topNavBar.classList.remove('sticky')
+      }
+      findClosest()
+    }
+
+    function findClosest() {
+      let specialTags = document.querySelectorAll('[data-x]')
+      let minIndex = 0
+      for (let i = 1; i < specialTags.length; i++) {
+        if (Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)) {
+          minIndex = i
+        }
+      }
+
+      specialTags[minIndex].classList.remove('offset')
+
+      let id = specialTags[minIndex].id
+      let a = document.querySelector('a[href="#' + id + '"]')
+      let li = a.parentNode
+      let brothersAndMe = li.parentNode.children
+      for (let i = 0; i < brothersAndMe.length; i++) {
+        brothersAndMe[i].classList.remove('highlight')
+      }
+      li.classList.add('highlight')
+
+    }
+
+
+    let liTags = document.querySelectorAll('nav.menu > ul > li')
+    for (let i = 0; i < liTags.length; i++) {
+      liTags[i].onmouseenter = function (x) {
+        x.currentTarget.classList.add('active')
+      }
+      liTags[i].onmouseleave = function (x) {
+        x.currentTarget.classList.remove('active')
+      }
+    }
+
+    let aTags = document.querySelectorAll('nav.menu > ul > li > a')
+
+    function animate(time) {
+      requestAnimationFrame(animate);
+      TWEEN.update(time);
+    }
+    requestAnimationFrame(animate);
+
+
+    for (let i = 0; i < aTags.length; i++) {
+      aTags[i].onclick = function (x) {
+        x.preventDefault()
+        let top = document.querySelector(x.currentTarget.getAttribute('href')).offsetTop
+        let currentTop = window.scrollY
+        let targetTop = top - 80
+        let s = targetTop - currentTop
+        var coords = { y: currentTop };
+        var t = Math.abs((s / 100) * 300)
+        if (t > 500) { t = 500 }
+        var tween = new TWEEN.Tween(coords)
+          .to({ y: targetTop }, t)
+          .easing(TWEEN.Easing.Quadratic.InOut)
+          .onUpdate(function () {
+            window.scrollTo(0, coords.y)
+          })
+          .start();
+
+      }
+
+    }
+
+  </script>
+</body>
+
+</html>
